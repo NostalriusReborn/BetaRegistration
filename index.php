@@ -1,3 +1,14 @@
+<?php
+
+require_once "config/Config.php";
+require_once "lib/MySQL.php";
+require_once "lib/Account.php";
+require_once "module/create_account.php";
+
+$account = createAccount();
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -80,13 +91,13 @@
             <div class="form">
                 <form>
                     <label for="username">Username (a-z/0-9)</label>
-                    <input type="text" name="username" id="username" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" />
+                    <input type="text" name="username" id="username" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" value="<?=$account->getUsername()?>" />
 
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required />
+                    <input type="password" name="password" id="password" required value="<?=$account->getPasswords()[0]?>" />
 
                     <label for="password_repeat">Password verification</label>
-                    <input type="password" name="password_repeat" id="password_repeat" required />
+                    <input type="password" name="password_repeat" id="password_repeat" required value="<?=$account->getPasswords()[1]?>" />
 
                     <input type="submit" name="signup" value="Sign Up" />
                 </form>
