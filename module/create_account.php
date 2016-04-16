@@ -6,7 +6,13 @@ function createAccount()
         return new Account(['username' => '', 'password' => '', 'password_repeat' => '']);
 
     $account = new Account($_POST);
-    $account->saveToDb();
-    
+    $result = $account->saveToDb();
+
+    if ($result == Account::STATUS_OK)
+    {
+        header("Location: success.php");
+        exit;
+    }
+
     return $account;
 }

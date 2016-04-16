@@ -24,7 +24,7 @@ class Account
 
     private function validateDataArray(array $data)
     {
-        return isset($data['username']) && isset($data['password']) && isset($data['password_repeat']));
+        return isset($data['username']) && isset($data['password']) && isset($data['password_repeat']);
     }
 
     private function validatePassword()

@@ -51,6 +51,7 @@ $account = createAccount();
                 width: 80%;
                 height: 36px;
                 cursor: pointer;
+                text-align: center;
             }
 
             .logo {
@@ -78,11 +79,6 @@ $account = createAccount();
                 margin-bottom: 20px;
             }
 
-            .errors li {
-                margin-bottom: 8px;
-                color: red;
-            }
-
             footer {
                 color: white;
                 text-align: center;
@@ -93,39 +89,13 @@ $account = createAccount();
         <header> </header>
         <img class="logo" src="img/logo.png" />
         <fieldset>
-            <div class="errors">
-                <ul>
-                    <?php
-                    foreach ($account->getErrors() as $error)
-                    {
-                        echo "<li>$error</li>";
-                    }
-                    ?>
-                </ul>
-            </div>
-            <div class="form">
-                <form method="post">
-                    <label for="username">Username (a-z/0-9)</label>
-                    <input type="text" name="username" id="username" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" value="<?=$account->getUsername()?>" />
-
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required value="<?=$account->getPasswords()[0]?>" />
-
-                    <label for="password_repeat">Password verification</label>
-                    <input type="password" name="password_repeat" id="password_repeat" required value="<?=$account->getPasswords()[1]?>" />
-
-                    <input type="submit" name="signup" value="Sign Up" />
-                </form>
-            </div>
-            <div class="information">
-                <ul>
-                    <li>This is a Beta Realm!</li>
-                    <li>Your Nostalrius characters won't be available before 30th of April.</li>
-                    <li>This Beta Realm doesn't meet the quality standards of Nostalrius before 30th of April.</li>
-                    <li>You will be able to migrate your beta characters to the main realm after 30th of April.</li>
-                    <li>The realmlist is <pre>set realmlist logon.nostalrius-reborn.org</pre></li>
-                </ul>
-            </div>
+            <h1 style="color: green;">Account successfully created!</h1>
+            <h3>Change now your realmlist.wtf to connect.</h3>
+            <ol>
+                <li>Navigate to your World of Warcraft directory</li>
+                <li>Open realmlist.wtf with your editor</li>
+                <li>Change the content of the file to <pre>set realmlist logon.nostalrius-reborn.org</pre></li>
+            </ol>
         </fieldset>
 
         <footer>
