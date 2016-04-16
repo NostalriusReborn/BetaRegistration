@@ -34,6 +34,7 @@ $account = createAccount();
                 padding: 50px;
                 box-shadow: 0 0 9px white;
                 margin: 90px auto;
+                text-align:center;
                 background-color: rgba(230, 230, 230, 0.9);
             }
 
@@ -51,7 +52,6 @@ $account = createAccount();
                 width: 80%;
                 height: 36px;
                 cursor: pointer;
-                text-align: center;
             }
 
             .logo {
@@ -91,11 +91,10 @@ $account = createAccount();
         <fieldset>
             <h1 style="color: green;">Account successfully created!</h1>
             <h3>Change now your realmlist.wtf to connect.</h3>
-            <ol>
-                <li>Navigate to your World of Warcraft directory</li>
-                <li>Open realmlist.wtf with your editor</li>
-                <li>Change the content of the file to <pre>set realmlist logon.nostalrius-reborn.org</pre></li>
-            </ol>
+            Navigate to your World of Warcraft directory<br>
+            Open realmlist.wtf with your editor<br>
+            Change the content of the file to <pre>set realmlist logon.nostalrius-reborn.org</pre><br><br>
+            <a href="https://vanilla.re">Back to our website</a>
         </fieldset>
 
         <footer>
