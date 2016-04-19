@@ -1,14 +1,3 @@
-<?php
-
-require_once "config/Config.php";
-require_once "lib/MySQL.php";
-require_once "lib/Account.php";
-require_once "module/create_account.php";
-
-$account = createAccount();
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
